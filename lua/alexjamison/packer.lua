@@ -12,7 +12,6 @@ end
 local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
-<<<<<<< HEAD
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
     use {
@@ -59,7 +58,6 @@ return require('packer').startup(function(use)
     use({
         "Pocco81/auto-save.nvim",
     })
-=======
 	  -- Packer can manage itself
 	  use 'wbthomason/packer.nvim'
 	  use {
@@ -100,5 +98,4 @@ return require('packer').startup(function(use)
       if packer_bootstrap then
           require('packer').sync()
       end
->>>>>>> d43358b
   end)
