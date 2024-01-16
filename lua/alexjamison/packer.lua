@@ -58,6 +58,8 @@ return require('packer').startup(function(use)
     use({
         "Pocco81/auto-save.nvim",
     })
+    use('jose-elias-alvarez/null-ls.nvim')
+    use('MunifTanjim/prettier.nvim')
       if packer_bootstrap then
           require('packer').sync()
       end
