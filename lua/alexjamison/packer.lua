@@ -60,7 +60,12 @@ return require('packer').startup(function(use)
     })
     use('jose-elias-alvarez/null-ls.nvim')
     use('MunifTanjim/prettier.nvim')
-      if packer_bootstrap then
-          require('packer').sync()
-      end
-  end)
+    use({
+        "L3MON4D3/LuaSnip",
+        tag = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+        run = "make install_jsregexp"
+    })
+    if packer_bootstrap then
+        require('packer').sync()
+    end
+end)
