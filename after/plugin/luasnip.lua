@@ -44,6 +44,7 @@ ls.add_snippets("javascript", {
     clg_snippet
 })
 ls.add_snippets("typescriptreact", {
+    clg_snippet,
     s("tsfc", fmt(
     [[
     type {a}Props = {b}
