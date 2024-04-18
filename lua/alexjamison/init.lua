@@ -1,6 +1,7 @@
 require("alexjamison.remap")
 require("alexjamison.set")
 require("alexjamison.copy")
+require("alexjamison.golang")
 
 local augroup = vim.api.nvim_create_augroup
 local autocmd = vim.api.nvim_create_autocmd
