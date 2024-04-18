@@ -10,3 +10,4 @@ vim.opt.smartindent = true
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
 vim.opt.updatetime = 50
+vim.g.neovide_scale_factor = 0.8
