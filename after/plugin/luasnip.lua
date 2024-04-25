@@ -56,5 +56,14 @@ ls.add_snippets("typescriptreact", {
         )
     {c}
     export default {a}
-    ]], {a = f(get_filename_without_extension), b = t("{"), i(1), i(2), i(3), c = t("}")}))
+    ]], {a = f(get_filename_without_extension), b = t("{"), i(1), i(2), i(3), c = t("}")})),
+    s("tsfun", fmt(
+        [[
+        export default function {a}() {b}
+            return (
+                <div></div>
+            )
+        {c}
+        ]], {a = f(get_filename_without_extension), b = t("{"), c = t("}")}
+    ))
 })
