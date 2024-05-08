@@ -15,6 +15,7 @@ prettier.setup({
         "typescript",
         "typescriptreact",
         "yaml",
+        "prisma",
     },
 })
 vim.keymap.set("n", "<leader>f", ":Prettier<CR>")

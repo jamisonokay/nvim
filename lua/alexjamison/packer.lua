@@ -62,9 +62,13 @@ return require('packer').startup(function(use)
     use('MunifTanjim/prettier.nvim')
     use({
         "L3MON4D3/LuaSnip",
-        tag = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+        tag = "v2.*",
         run = "make install_jsregexp"
     })
+    use {
+        "pcolladosoto/tinygo.nvim",
+        config = function() require("tinygo").setup() end
+    }
     use { 'codota/tabnine-nvim', run = "./dl_binaries.sh" }
     if packer_bootstrap then
         require('packer').sync()
