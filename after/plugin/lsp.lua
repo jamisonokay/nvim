@@ -29,13 +29,14 @@ require('mason-lspconfig').setup({
 
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
+-- you can set max_item_count to limit result stuff
 cmp.setup({
 	sources = {
-		{name = 'path', max_item_count = 5},
-		{name = 'nvim_lsp', max_item_count = 5},
-		{name = 'nvim_lua', max_item_count = 5},
-		{name = 'luasnip', keyword_length = 2},
-		{name = 'buffer', keyword_length = 3, max_item_count = 4},
+		{name = 'path'},
+		{name = 'nvim_lsp'},
+		{name = 'nvim_lua'},
+		{name = 'luasnip'},
+		{name = 'buffer', keyword_length = 3},
 	},
 	formatting = lsp_zero.cmp_format(),
 	mapping = cmp.mapping.preset.insert({
