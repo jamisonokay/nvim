@@ -14,6 +14,7 @@ local packer_bootstrap = ensure_packer()
 return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
+    use('dmmulroy/tsc.nvim')
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.5',
         --  or                            , branch = '0.1.x',
