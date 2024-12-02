@@ -4,6 +4,7 @@ local s = ls.snippet
 local t = ls.text_node
 local i = ls.insert_node
 local f = ls.function_node
+
 local clg_snippet = s("clg", {
     t('console.log('),
     i(1),
@@ -66,4 +67,11 @@ ls.add_snippets("typescriptreact", {
         {c}
         ]], {a = f(get_filename_without_extension), b = t("{"), c = t("}")}
     ))
+})
+
+ls.setup({
+    ext_opts = {
+        [require("luasnip.util.types").choiceNode] = { passive = { hl_group = nil } },
+        [require("luasnip.util.types").insertNode] = { passive = { hl_group = nil } },
+    }
 })
