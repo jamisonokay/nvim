@@ -12,8 +12,13 @@ local clg_snippet = s("clg", {
 
 })
 local function get_filename_without_extension()
-    local filename = vim.fn.expand("%:t")
-    return filename:gsub("%..*$", "")
+    local filename = vim.fn.expand("%:t"):gsub("%..*$", "") -- Убираем расширение
+    if not filename:find("-") then
+        return filename:sub(1, 1):upper() .. filename:sub(2) -- Первую букву делаем заглавной
+    end
+    return filename:gsub("-(%a)", function(c)
+        return c:upper()
+    end):gsub("^%l", string.upper) -- Делаем каждое слово с заглавной буквы
 end
 ls.add_snippets("lua", {
     s("hello", {
